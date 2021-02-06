@@ -27,6 +27,7 @@ public class Fill2 {
         throw new RuntimeException(e);
       }
   }
+  // static <T>：表示将方法声明为泛型方法
   // Generator version:
   public static <T> void fill(Addable<T> addable,
                               Generator<T> generator, int size) {
