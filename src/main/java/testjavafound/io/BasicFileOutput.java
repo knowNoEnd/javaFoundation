@@ -20,4 +20,4 @@ public class BasicFileOutput {
     // Show the stored file:
     System.out.println(BufferedInputFile.read(file));
   }
-} /* (Execute to see output) *///:~
+}
