@@ -2,7 +2,7 @@
 // Generate different types of Coffee:
 package main.java.testjavafound.generic.coffee;
 
-import net.mindview.util.Generator;
+import main.java.testjavafound.net.mindview.util.Generator;
 
 import java.util.Iterator;
 import java.util.Random;
@@ -36,7 +36,7 @@ implements Generator<Coffee>, Iterable<Coffee> {
     public void remove() { // Not implemented
       throw new UnsupportedOperationException();
     }
-  };	
+  };
   public Iterator<Coffee> iterator() {
     return new CoffeeIterator();
   }

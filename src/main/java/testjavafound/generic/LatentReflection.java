@@ -26,6 +26,7 @@ class CommunicateReflectively {
     try {
       try {
         Method speak = spkr.getMethod("speak");
+        // 在具有指定参数的 方法对象上调用此 方法对象表示的底层方法。
         speak.invoke(speaker);
       } catch(NoSuchMethodException e) {
         print(speaker + " cannot speak");
