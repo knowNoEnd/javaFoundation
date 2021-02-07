@@ -12,7 +12,7 @@ public class Apply {
   void apply(S seq, Method f, Object... args) {
     try {
       for(T t: seq)
-        // invoke：匹配方法的参数类型
+        // invoke：匹配对象方法
         f.invoke(t, args);
     } catch(Exception e) {
       // Failures are programmer errors
