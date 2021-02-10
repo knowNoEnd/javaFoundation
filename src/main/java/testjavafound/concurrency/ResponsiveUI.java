@@ -27,5 +27,12 @@ public class ResponsiveUI extends Thread {
     new ResponsiveUI();
     System.in.read();
     System.out.println(d); // Shows progress
+    /* 一直监听控制台
+      while (true) {
+      System.in.read();
+      System.out.println(d); // Shows progress
+    }
+     */
+
   }
-} ///:~
+}
