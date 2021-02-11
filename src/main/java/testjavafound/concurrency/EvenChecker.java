@@ -14,6 +14,8 @@ public class EvenChecker implements Runnable {
   public void run() {
     while(!generator.isCanceled()) {
       int val = generator.next();
+      // 自定义
+      //  % 3就可以解决无限执行的问题
       if(val % 2 != 0) {
         System.out.println(val + " not even!");
       /**
@@ -24,7 +26,6 @@ public class EvenChecker implements Runnable {
        *         e.printStackTrace();
        *       }
        */
-
         generator.cancel(); // Cancels all EvenCheckers
       }
     }
@@ -43,7 +44,6 @@ public class EvenChecker implements Runnable {
      *       e.printStackTrace();
      *     }
      */
-
     exec.shutdown();
   }
   // Default value for count:
