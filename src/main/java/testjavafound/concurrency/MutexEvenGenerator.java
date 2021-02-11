@@ -19,7 +19,7 @@ public class MutexEvenGenerator extends IntGenerator {
       lock.unlock();
     }
   }
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InterruptedException {
     EvenChecker.test(new MutexEvenGenerator());
   }
 } ///:~

@@ -6,4 +6,4 @@ public abstract class IntGenerator {
   // Allow this to be canceled:
   public void cancel() { canceled = true; }
   public boolean isCanceled() { return canceled; }
-} ///:~
+}

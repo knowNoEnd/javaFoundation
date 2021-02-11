@@ -26,6 +26,8 @@ public class ResponsiveUI extends Thread {
     //! new UnresponsiveUI(); // Must kill this process
     new ResponsiveUI();
     System.in.read();
+    // 自定义
+//    sleep(10000);
     System.out.println(d); // Shows progress
     /* 一直监听控制台
       while (true) {
