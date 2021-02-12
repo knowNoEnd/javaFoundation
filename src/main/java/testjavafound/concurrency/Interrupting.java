@@ -76,16 +76,4 @@ public class Interrupting {
     print("Aborting with System.exit(0)");
     System.exit(0); // ... since last 2 interrupts failed
   }
-} /* Output: (95% match)
-Interrupting SleepBlocked
-InterruptedException
-Exiting SleepBlocked.run()
-Interrupt sent to SleepBlocked
-Waiting for read():
-Interrupting IOBlocked
-Interrupt sent to IOBlocked
-Trying to call f()
-Interrupting SynchronizedBlocked
-Interrupt sent to SynchronizedBlocked
-Aborting with System.exit(0)
-*///:~
+}
