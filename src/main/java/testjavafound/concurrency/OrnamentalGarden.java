@@ -16,6 +16,13 @@ class Count {
   public synchronized int increment() {
     int temp = count;
     if(rand.nextBoolean()) // Yield half the time
+    /**
+     * yield：
+     * v.
+     * 出产(作物);产生(收益、效益等);提供;屈服;让步;放弃;缴出
+     * n.
+     * 产量;产出;利润
+     */
       Thread.yield();
     return (count = ++temp);
   }
@@ -76,7 +83,7 @@ public class OrnamentalGarden {
     TimeUnit.SECONDS.sleep(3);
     Entrance.cancel();
     exec.shutdown();
-    if(!exec.awaitTermination(250, TimeUnit.MILLISECONDS))
+    if(!exec.awaitTermination(10, TimeUnit.MILLISECONDS))
       print("Some tasks were not terminated!");
     print("Total: " + Entrance.getTotalCount());
     print("Sum of Entrances: " + Entrance.sumEntrances());
