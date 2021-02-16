@@ -63,20 +63,4 @@ public class NotifyVsNotifyAll {
     System.out.println("\nShutting down");
     exec.shutdownNow(); // Interrupt all tasks
   }
-} /* Output: (Sample)
-notify() Thread[pool-1-thread-1,5,main]
-notifyAll() Thread[pool-1-thread-1,5,main] Thread[pool-1-thread-5,5,main] Thread[pool-1-thread-4,5,main] Thread[pool-1-thread-3,5,main] Thread[pool-1-thread-2,5,main]
-notify() Thread[pool-1-thread-1,5,main]
-notifyAll() Thread[pool-1-thread-1,5,main] Thread[pool-1-thread-2,5,main] Thread[pool-1-thread-3,5,main] Thread[pool-1-thread-4,5,main] Thread[pool-1-thread-5,5,main]
-notify() Thread[pool-1-thread-1,5,main]
-notifyAll() Thread[pool-1-thread-1,5,main] Thread[pool-1-thread-5,5,main] Thread[pool-1-thread-4,5,main] Thread[pool-1-thread-3,5,main] Thread[pool-1-thread-2,5,main]
-notify() Thread[pool-1-thread-1,5,main]
-notifyAll() Thread[pool-1-thread-1,5,main] Thread[pool-1-thread-2,5,main] Thread[pool-1-thread-3,5,main] Thread[pool-1-thread-4,5,main] Thread[pool-1-thread-5,5,main]
-notify() Thread[pool-1-thread-1,5,main]
-notifyAll() Thread[pool-1-thread-1,5,main] Thread[pool-1-thread-5,5,main] Thread[pool-1-thread-4,5,main] Thread[pool-1-thread-3,5,main] Thread[pool-1-thread-2,5,main]
-notify() Thread[pool-1-thread-1,5,main]
-notifyAll() Thread[pool-1-thread-1,5,main] Thread[pool-1-thread-2,5,main] Thread[pool-1-thread-3,5,main] Thread[pool-1-thread-4,5,main] Thread[pool-1-thread-5,5,main]
-Timer canceled
-Task2.blocker.prodAll() Thread[pool-1-thread-6,5,main]
-Shutting down
-*///:~
+}

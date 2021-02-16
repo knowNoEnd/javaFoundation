@@ -71,4 +71,4 @@ public class TestBlockingQueues {
     test("SynchronousQueue", // Size of 1
       new SynchronousQueue<LiftOff>());
   }
-} ///:~
+}
