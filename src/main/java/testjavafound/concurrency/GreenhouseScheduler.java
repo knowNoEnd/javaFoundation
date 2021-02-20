@@ -155,4 +155,4 @@ public class GreenhouseScheduler {
     gh.repeat(gh.new ThermostatDay(), 0, 1400);
     gh.repeat(gh.new CollectData(), 500, 500);
   }
-} /* (Execute to see output) *///:~
+}

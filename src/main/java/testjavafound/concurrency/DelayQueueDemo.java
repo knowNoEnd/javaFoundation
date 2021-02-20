@@ -12,6 +12,12 @@ import static main.java.testjavafound.net.mindview.util.Print.printnb;
 
 class DelayedTask implements Runnable, Delayed {
   private static int counter = 0;
+  /**
+   *   如果引用为基本数据类型，则该引用为常量，该值无法修改；
+   *   如果引用为引用数据类型，比如对象、数组，则该对象、数组本身可以修改，
+   * 但指向该对象或数组的地址的引用不能修改。
+   *   如果引用时类的成员变量，则必须当场赋值，否则编译会报错。
+   */
   private final int id = counter++;
   private final int delta;
   private final long trigger;
@@ -20,6 +26,7 @@ class DelayedTask implements Runnable, Delayed {
   public DelayedTask(int delayInMilliseconds) {
     delta = delayInMilliseconds;
     trigger = System.nanoTime() +
+      // NANOSECONDS.convert：转换单位
       NANOSECONDS.convert(delta, MILLISECONDS);
     sequence.add(this);
   }
@@ -87,8 +94,4 @@ public class DelayQueueDemo {
     queue.add(new DelayedTask.EndSentinel(5000, exec));
     exec.execute(new DelayedTaskConsumer(queue));
   }
-} /* Output:
-[128 ] Task 11 [200 ] Task 7 [429 ] Task 5 [520 ] Task 18 [555 ] Task 1 [961 ] Task 4 [998 ] Task 16 [1207] Task 9 [1693] Task 2 [1809] Task 14 [1861] Task 3 [2278] Task 15 [3288] Task 10 [3551] Task 12 [4258] Task 0 [4258] Task 19 [4522] Task 8 [4589] Task 13 [4861] Task 17 [4868] Task 6 (0:4258) (1:555) (2:1693) (3:1861) (4:961) (5:429) (6:4868) (7:200) (8:4522) (9:1207) (10:3288) (11:128) (12:3551) (13:4589) (14:1809) (15:2278) (16:998) (17:4861) (18:520) (19:4258) (20:5000)
-[5000] Task 20 Calling shutdownNow()
-Finished DelayedTaskConsumer
-*///:~
+}
