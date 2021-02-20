@@ -15,6 +15,4 @@ public class RaggedArray {
     }
     System.out.println(Arrays.deepToString(a));
   }
-} /* Output:
-[[], [[0], [0], [0, 0, 0, 0]], [[], [0, 0], [0, 0]], [[0, 0, 0], [0], [0, 0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0], []], [[0], [], [0]]]
-*///:~
+}

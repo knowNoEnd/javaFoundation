@@ -19,4 +19,4 @@ public class ParameterizedArrayType {
     ints2 = MethodParameter.f(ints);
     doubles2 = MethodParameter.f(doubles);
   }
-} ///:~
+}
