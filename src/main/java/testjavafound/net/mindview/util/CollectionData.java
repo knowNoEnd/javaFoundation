@@ -13,4 +13,4 @@ public class CollectionData<T> extends ArrayList<T> {
   list(Generator<T> gen, int quantity) {
     return new CollectionData<T>(gen, quantity);
   }
-} ///:~
+}

@@ -7,6 +7,8 @@ import java.util.List;
 public class ArrayOfGenerics {
   @SuppressWarnings("unchecked")
   public static void main(String[] args) {
+    // 数组不能实例化泛型数组
+//    List<String>[] ls = new List<String>[10];
     List<String>[] ls;
     List[] la = new List[10];
     ls = (List<String>[])la; // "Unchecked" warning
@@ -27,4 +29,4 @@ public class ArrayOfGenerics {
     for(int i = 0; i < spheres.length; i++)
       spheres[i] = new ArrayList<BerylliumSphere>();
   }
-} ///:~
+}

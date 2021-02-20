@@ -15,4 +15,4 @@ public class Generated {
       (T[])java.lang.reflect.Array.newInstance(type, size);
     return new CollectionData<T>(gen, size).toArray(a);
   }
-} ///:~
+}
