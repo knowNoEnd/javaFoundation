@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import static main.java.testjavafound.net.mindview.util.Print.print;
 
 // Performs some portion of a task:
+// TaskPortion：任务部分
 class TaskPortion implements Runnable {
   private static int counter = 0;
   private final int id = counter++;
@@ -62,6 +63,7 @@ public class CountDownLatchDemo {
     // All must share a single CountDownLatch object:
     CountDownLatch latch = new CountDownLatch(SIZE);
     for(int i = 0; i < 10; i++)
+      // 线程之间是无序状态
       exec.execute(new WaitingTask(latch));
     for(int i = 0; i < SIZE; i++)
       exec.execute(new TaskPortion(latch));
