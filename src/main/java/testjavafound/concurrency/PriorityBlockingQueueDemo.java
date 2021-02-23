@@ -124,4 +124,4 @@ public class PriorityBlockingQueueDemo {
     exec.execute(new PrioritizedTaskProducer(queue, exec));
     exec.execute(new PrioritizedTaskConsumer(queue));
   }
-} /* (Execute to see output) *///:~
+}

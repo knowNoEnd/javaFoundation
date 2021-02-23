@@ -48,7 +48,7 @@ public class HorseRace {
     Executors.newCachedThreadPool();
   private CyclicBarrier barrier;
   public HorseRace(int nHorses, final int pause) {
-    // CyclicBarrier：自己本身有全部执行完停止的规则
+    // CyclicBarrier：自己本身有全部执行完停止等待的功能
     barrier = new CyclicBarrier(nHorses, new Runnable() {
       public void run() {
         StringBuilder s = new StringBuilder();

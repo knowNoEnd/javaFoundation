@@ -12,7 +12,7 @@ import static main.java.testjavafound.net.mindview.util.Print.printnb;
 
 class DelayedTask implements Runnable, Delayed {
   private static int counter = 0;
-  /**
+  /** final:
    *   如果引用为基本数据类型，则该引用为常量，该值无法修改；
    *   如果引用为引用数据类型，比如对象、数组，则该对象、数组本身可以修改，
    * 但指向该对象或数组的地址的引用不能修改。
@@ -85,6 +85,17 @@ public class DelayQueueDemo {
   public static void main(String[] args) {
     Random rand = new Random(47);
     ExecutorService exec = Executors.newCachedThreadPool();
+    /** DelayQueue
+     *    add()
+     *    将指定的元素插入到此队列中（如果立即可行且不会违反容量限制），在成功时返回 true，
+     *    如果当前没有可用空间，则抛出 IllegalStateException。
+     *    offer()
+     *    将指定元素插入到此队列的尾部（如果立即可行且不会超出此队列的容量），
+     *    在成功时返回 true，如果此队列已满，则返回 false。当使用有容量限制的队列时，
+     *    此方法通常要优于 add 方法，后者可能无法插入元素，而只是抛出一个异常。
+     *    put()
+     *    将指定元素插入到此队列的尾部，如有必要，则等待空间变得可用。
+     */
     DelayQueue<DelayedTask> queue =
       new DelayQueue<DelayedTask>();
     // Fill with tasks that have random delays:
