@@ -27,6 +27,7 @@ public class ComboBoxes extends JFrame {
           c.addItem(description[count++]);
       }
     });
+    // 测试
     c.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         t.setText("index: "+ c.getSelectedIndex() + "   " +
