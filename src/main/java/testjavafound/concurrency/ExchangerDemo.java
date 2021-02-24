@@ -56,7 +56,7 @@ class ExchangerConsumer<T> implements Runnable {
 
 public class ExchangerDemo {
   static int size = 10;
-  static int delay = 5; // Seconds
+  static int delay = 5; // Seconds秒
   public static void main(String[] args) throws Exception {
     if(args.length > 0)
       size = new Integer(args[0]);
@@ -74,6 +74,4 @@ public class ExchangerDemo {
     TimeUnit.SECONDS.sleep(delay);
     exec.shutdownNow();
   }
-} /* Output: (Sample)
-Final value: Fat id: 29999
-*///:~
+}
