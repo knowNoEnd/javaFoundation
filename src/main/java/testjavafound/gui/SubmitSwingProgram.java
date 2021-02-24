@@ -25,4 +25,4 @@ public class SubmitSwingProgram extends JFrame {
       }
     });
   }
-} ///:~
+}
