@@ -24,6 +24,13 @@ public class GreenhouseScheduler {
   }
   public void
   repeat(Runnable event, long initialDelay, long period) {
+    /**
+     * scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit)
+     * command - 要执行的任务
+     * initialDelay - 延迟第一次执行的时间
+     * period - 连续执行之间的时期
+     * unit - initialDelay和period参数的时间单位
+     */
     scheduler.scheduleAtFixedRate(
       event, initialDelay, period, TimeUnit.MILLISECONDS);
   }
@@ -128,6 +135,7 @@ public class GreenhouseScheduler {
         if(rand.nextInt(5) == 4)
           tempDirection = -tempDirection;
         // Store previous value:
+        // nextFloat 返回下一个介于0.0和1.0之间的伪随机浮点数。
         lastTemp = lastTemp +
           tempDirection * (1.0f + rand.nextFloat());
         if(rand.nextInt(5) == 4)
@@ -145,6 +153,7 @@ public class GreenhouseScheduler {
   public static void main(String[] args) {
     // ffsfssuu99
     GreenhouseScheduler gh = new GreenhouseScheduler();
+    // 终止事件
     gh.schedule(gh.new Terminate(), 5000);
     // Former "Restart" class not necessary:
     gh.repeat(gh.new Bell(), 0, 1000);

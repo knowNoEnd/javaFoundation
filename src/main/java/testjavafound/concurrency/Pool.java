@@ -49,4 +49,4 @@ public class Pool<T> {
     }
     return false; // Wasn't checked out
   }
-} ///:~
+}

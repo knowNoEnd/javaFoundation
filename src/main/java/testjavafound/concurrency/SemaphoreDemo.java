@@ -71,4 +71,4 @@ public class SemaphoreDemo {
       pool.checkIn(f); // Second checkIn ignored
     exec.shutdown();
   }
-} /* (Execute to see output) *///:~
+}
